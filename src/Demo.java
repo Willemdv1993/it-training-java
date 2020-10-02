@@ -5,12 +5,23 @@ public class Demo {
 		Dier dier = new Dier();
 		Dier dier2 = new Konijn();
 		Konijn konijn = new Konijn();
-		Konijn konijn2 = new Dier();
+//		Konijn konijn2 = new Dier(); // kan niet 
 		
+		dier.aantalCellen = 2000000;
+		konijn.aantalCellen = 100000;
 		
+		Dierenambulance ab = new Dierenambulance();
+		
+		ab.ophalen(dier);
+		ab.ophalen(konijn);
 	}
 }
 
+class Dierenambulance{
+	void ophalen(Dier dier) {
+		System.out.println("ophalen " + dier.aantalCellen);
+	}
+}
 class Dier{
 	
 	int aantalCellen;
