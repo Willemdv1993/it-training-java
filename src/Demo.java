@@ -2,47 +2,30 @@
 public class Demo {
 	public static void main(String args[]) {
 		
-		Speler spelerWit = new Speler();
-		spelerWit.voornaam = "Johan";
-		spelerWit.kleur = "wit";
-
-		Speler spelerZwart = new Speler();
-		spelerZwart.voornaam = "Grietje";
-		spelerZwart.kleur = "zwart";
+		Dier dier = new Dier();
+		Dier dier2 = new Konijn();
+		Konijn konijn = new Konijn();
+		Konijn konijn2 = new Dier();
 		
-		spelerWit.voorstellen();
-		spelerZwart.voorstellen();
 		
-		Schaakspel spel1 = new Schaakspel();
-		spel1.starten();
 	}
 }
 
-class Speler {
-	String voornaam;
-	String kleur;
-	int leeftijd;
+class Dier{
 	
-	void voorstellen() {
-		System.out.println("Hoi ik ben " + voornaam + " en ik speel met " + kleur);
+	int aantalCellen;
+	void voortplanten() {
+		
+		System.out.println("voortplanten");
 	}
-	void nieuweNaamGeven(String nieuweNaam) {
-		voornaam = nieuweNaam;
-	}
+	
 }
 
-class Schaakspel {
+class Konijn extends Dier{ // is a relatie 
 	
-	void starten() {
-		Speler spelerWit = new Speler();
-		spelerWit.voornaam = "Johan";
-		spelerWit.kleur = "wit";
-
-		Speler spelerZwart = new Speler();
-		spelerZwart.voornaam = "Grietje";
-		spelerZwart.kleur = "zwart";
+	int lengteOren;
+	void wortelsEten() {
 		
-		spelerWit.voorstellen();
-		spelerZwart.voorstellen();
+		System.out.println("wortels eten in Konijn");
 	}
 }
